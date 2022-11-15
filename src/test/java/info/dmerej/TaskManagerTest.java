@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CommandTest {
+public class TaskManagerTest {
     @Test
     void command_add_task_to_empty_list() {
         var taskManager = new TaskManager();
