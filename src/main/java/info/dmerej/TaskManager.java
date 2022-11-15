@@ -1,14 +1,19 @@
 package info.dmerej;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class TaskManager {
-    List<Task> tasks;
-    int nextId = 0;
+    private final List<Task> tasks;
+    private int nextId = 0;
 
     public TaskManager() {
         tasks = new ArrayList<>();
+    }
+
+    public List<Task> getTasks() {
+        return Collections.unmodifiableList(tasks);
     }
 
     public void addCreatedTask(String description) {
