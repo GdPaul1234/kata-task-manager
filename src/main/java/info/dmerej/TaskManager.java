@@ -3,6 +3,7 @@ package info.dmerej;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TaskManager {
     private final List<Task> tasks;
@@ -14,6 +15,10 @@ public class TaskManager {
 
     public List<Task> getTasks() {
         return Collections.unmodifiableList(tasks);
+    }
+
+    public void addTask(Task task) {
+        this.tasks.add(task);
     }
 
     public void addCreatedTask(String description) {

@@ -53,9 +53,6 @@ public final class Task {
 
     @Override
     public String toString() {
-        return "Task[" +
-                "description=" + description + ", " +
-                "id=" + id + ", " +
-                "status=" + status + ']';
+        return String.format("%d %s %s", id, status, description);
     }
 }
