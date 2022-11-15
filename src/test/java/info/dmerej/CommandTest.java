@@ -31,4 +31,16 @@ public class CommandTest {
         );
         assertEquals(taskManager.tasks, expectedTaskList);
     }
+
+    @Test
+    void command_get_task_by_id() {
+        var taskManager = new TaskManager();
+        taskManager.addCreatedTask("Ma nouvelle tâche");
+        taskManager.addCreatedTask("Ma deuxième tâche");
+        taskManager.addCreatedTask("Ma troisième tâche");
+        var id = 2;
+
+        var expectedTask = new Task("Ma deuxième tâche", 2);
+        assertEquals(taskManager.getTaskById(id), expectedTask);
+    }
 }

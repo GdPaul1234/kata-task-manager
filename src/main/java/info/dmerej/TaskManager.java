@@ -15,4 +15,11 @@ public class TaskManager {
         var createdTask = new Task(description, ++nextId);
         this.tasks.add(createdTask);
     }
+
+    public Task getTaskById(int id) {
+        return tasks.stream()
+                .filter(task -> task.id() == id)
+                .findFirst()
+                .orElse(null);
+    }
 }
