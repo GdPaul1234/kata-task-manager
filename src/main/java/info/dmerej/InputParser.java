@@ -1,9 +1,7 @@
 package info.dmerej;
 
-import java.util.List;
-
 public class InputParser {
-    public static List<String> parse(String input) {
-        return List.of("+", "<description>");
+    public static String[] parse(String input) {
+        return input.split(" ", 2);
     }
 }
